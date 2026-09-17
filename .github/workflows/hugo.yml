@@ -20,7 +20,7 @@ defaults:
     shell: bash
 
 env:
-  HUGO_VERSION: 0.147.9
+  HUGO_VERSION: 0.166.0
 
 jobs:
   build:
@@ -51,7 +51,6 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          hugo mod get -u
           hugo \
             --gc --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
